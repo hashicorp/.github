@@ -48,9 +48,9 @@ jobs:
         # Run GitHub flavored (gfm) markdown through pandoc to convert to jira markdown
         # Then replace newlines with %0A so that newlines get preserved when storing in the step output
         # The %0A will then get expanded back to real new lines when the output is included in a later step inside $ {{}} syntax
-        BODY="$(cat <<"EOF" | docker run -i --rm pandoc/core:2.11.0.4 --from gfm --to jira | awk '{printf "%s%%0A", $0}'
+        BODY="$(cat <<"EOF-PandocInput" | docker run -i --rm pandoc/core:2.11.0.4 --from gfm --to jira | awk '{printf "%s%%0A", $0}'
         ${{ github.event.comment.body || github.event.review.body || github.event.issue.body || github.event.pull_request.body }}
-        EOF
+        EOF-PandocInput
         )"
         echo "::set-output name=body::${BODY}"
     - name: Create ticket
