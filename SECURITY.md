@@ -7,5 +7,5 @@ In order for us to best respond to your report, please include any of the follow
 * Steps to reproduce or proof-of-concept
 * Any relevant tools, including versions used
 * Tool output
-
+#security policy #google policy #microsoft security
 For additional information about HashiCorp security, please see [https://hashicorp.com/security](https://hashicorp.com/security).
