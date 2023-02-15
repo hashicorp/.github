@@ -1,5 +1,0 @@
-{
-    "name": "Jira sync",
-    "description": "Syncs GitHub issues, PRs and comments to Jira tickets.",
-    "iconName": "vault-logo"
-}
