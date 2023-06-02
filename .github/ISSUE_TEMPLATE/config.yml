@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: ⚠ CDKTF Issues
+  - name: 🛠 CDKTF Issues
     url: https://github.com/hashicorp/terraform-cdk/issues/new/choose
-    about: "The majority of issues need to be resolved in the main cdktf codebase, so the best way to get eyes on those is to file them in the terraform-cdk repository instead."
+    about: "The majority of issues need to be resolved in the main cdktf codebase, so the best way to get 👀 on those is to file them in the terraform-cdk repository."
   - name: ❓ Question
     url: https://discuss.hashicorp.com/c/terraform-core/cdk-for-terraform/47
     about: 🙋 For usage questions that may not require a core maintainer to answer, post in our community forum
