@@ -1,11 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 🐛 Bug Report
-    url: https://github.com/hashicorp/terraform-cdk/issues/new?assignees=&labels=bug%2C+new&template=bug-report.md&title=
-    about: "If something isn't working as expected 🤔 please file bug reports in the main terraform-cdk repository instead."
-  - name: 🚀 Feature Request
-    url: https://github.com/hashicorp/terraform-cdk/issues/new?assignees=&labels=enhancement%2C+new&template=feature-request.md&title=
-    about: "If you have a suggestion (and maybe even want to implement it yourself 🙂) please submit your requests in the main terraform-cdk repository instead."
+  - name: ⚠ CDKTF Issues
+    url: https://github.com/hashicorp/terraform-cdk/issues/new/choose
+    about: "The majority of issues need to be resolved in the main cdktf codebase, so the best way to get eyes on those is to file them in the terraform-cdk repository instead."
   - name: ❓ Question
     url: https://discuss.hashicorp.com/c/terraform-core/cdk-for-terraform/47
     about: 🙋 For usage questions that may not require a core maintainer to answer, post in our community forum
