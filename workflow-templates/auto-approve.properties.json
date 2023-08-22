@@ -1,0 +1,10 @@
+{
+  "name": "Auto-Approve Workflow",
+  "description": "A workflow that automatically approves any PR labeled 'auto-approve'",
+  "creator": "HashiCorp",
+  "iconName": "octicon checklist",
+  "categories": [
+    "code-review",
+    "Automation"
+  ]
+}
