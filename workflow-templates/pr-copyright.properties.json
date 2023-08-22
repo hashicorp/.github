@@ -1,0 +1,9 @@
+{
+  "name": "Copyright Headers Workflow",
+  "description": "A workflow that adds HashiCorp's required copyright headers to a pull request as a new commit on the branch or fork",
+  "creator": "HashiCorp",
+  "iconName": "octicon law",
+  "categories": [
+    "Automation"
+  ]
+}
