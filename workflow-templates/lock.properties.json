@@ -1,0 +1,9 @@
+{
+  "name": "Lock Workflow",
+  "description": "A workflow that locks issues and PRs that have been closed for 30 days",
+  "creator": "HashiCorp",
+  "iconName": "octicon lock",
+  "categories": [
+    "Automation"
+  ]
+}
