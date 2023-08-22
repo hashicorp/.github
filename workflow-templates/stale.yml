@@ -1,3 +1,8 @@
+# NOTE: Before activating this workflow, it is recommended that you create two new labels in your repo:
+# - "stale", suggested color: #586657
+# - "backlog", suggested color: #F8E16A
+# Add the "backlog" label to issues that you never want marked as "stale" even if they're inactive
+
 name: stale
 on:
   schedule:
