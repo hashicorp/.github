@@ -1,0 +1,9 @@
+{
+  "name": "Semantic PR Workflow",
+  "description": "A workflow that validates that pull request titles follow the Conventional Commits spec",
+  "creator": "HashiCorp",
+  "iconName": "octicon circle",
+  "categories": [
+    "Automation"
+  ]
+}
