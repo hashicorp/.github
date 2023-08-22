@@ -2,6 +2,7 @@ name: lock
 on:
   schedule:
     - cron: $cron-daily
+  workflow_dispatch: {}
 jobs:
   lock:
     runs-on: ubuntu-latest
