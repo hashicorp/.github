@@ -1,0 +1,23 @@
+name: automerge
+on:
+  pull_request_target:
+    types:
+      - opened
+      - labeled
+      - ready_for_review
+      - reopened
+      - synchronize
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+      - name: Turn on automerge for this PR
+        run: gh pr merge --auto ${{ github.event.pull_request.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
