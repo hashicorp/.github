@@ -1,3 +1,14 @@
+# NOTE: Make sure you set up GitHub Branch Protection rules before adding this workflow
+# https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule
+#
+# You probably want to have the following requirements checked:
+# - Require a pull request before merging
+# - Require approvals (1)
+# - Require status checks to pass before merging
+# - Require conversation resolution before merging
+# - Require linear history
+# - Do not allow bypassing the above settings
+
 name: automerge
 on:
   pull_request_target:
