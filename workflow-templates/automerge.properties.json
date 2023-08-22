@@ -1,9 +1,10 @@
 {
-  "name": "Automerge Workflow",
+  "name": "CDKTF Automerge Workflow",
   "description": "A workflow that activates GitHub's built-in automerge feature for any PR labeled 'automerge'",
+  "creator": "HashiCorp",
   "iconName": "octicon git-merge",
   "categories": [
     "continuous-integration",
-    "Automation",
+    "Automation"
   ]
 }
