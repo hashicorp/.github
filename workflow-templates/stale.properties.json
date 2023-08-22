@@ -1,0 +1,9 @@
+{
+  "name": "Stale Workflow",
+  "description": "A workflow that labels issues and PRs as 'stale' and closes them after 60/90 days of inactivity respectively",
+  "creator": "HashiCorp",
+  "iconName": "octicon clock",
+  "categories": [
+    "Automation"
+  ]
+}
