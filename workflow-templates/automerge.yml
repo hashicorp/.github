@@ -5,9 +5,14 @@
 # - Require a pull request before merging
 # - Require approvals (1)
 # - Require status checks to pass before merging
+#   - You need to have at least one status check marked as required from "any source". This should probably be your build or test workflow.
+#   - I would not recommend turning on "Require branches to be up to date before merging" since it gets obnoxious
 # - Require conversation resolution before merging
 # - Require linear history
 # - Do not allow bypassing the above settings
+#
+# NOTE: Before activating this workflow, it is recommended that you create a new label in your repo:
+# - "automerge", suggested color: #5DC8DB
 
 name: automerge
 on:
@@ -24,11 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
+    if: contains(github.event.pull_request.labels.*.name, 'automerge')
     steps:
       - name: Checkout
         uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
       - name: Turn on automerge for this PR
         run: gh pr merge --auto --squash ${{ github.event.pull_request.number }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }} # NOTE: Replace this with the name of your token associated with the team-tf-cdk user
