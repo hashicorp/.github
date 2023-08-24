@@ -1,3 +1,6 @@
+# NOTE: Before activating this workflow, it is recommended that you create a new label in your repo:
+# - "auto-approve", suggested color: #8BF8BD
+
 name: auto-approve
 on:
   pull_request_target:
