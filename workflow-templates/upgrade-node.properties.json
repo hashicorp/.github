@@ -1,0 +1,15 @@
+{
+  "name": "Auto-Upgrade Node.js",
+  "description": "A workflow that automatically upgrades Node to the next LTS version a month before the previous one goes EOL",
+  "creator": "HashiCorp",
+  "iconName": "octicon package",
+  "categories": [
+    "‎JavaScript",
+    "Yarn",
+    "Automation",
+    "dependency-management"
+  ],
+  "filePatterns": [
+    "^yarn.lock$"
+  ]
+}
