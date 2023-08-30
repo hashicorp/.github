@@ -1,0 +1,16 @@
+{
+    "name": "CDKTF Python Project Test",
+    "description": "A workflow that installs needed dependencies of python project and runs pytest on the project",
+    "creator": "HashiCorp",
+    "iconName": "octicon beaker",
+    "categories": [
+        "‎Python",
+        "Pip",
+        "Automation",
+        "Pytest",
+        "Testing"
+    ],
+    "filePatterns": [
+        "^Pipfile.lock$"
+    ]
+}

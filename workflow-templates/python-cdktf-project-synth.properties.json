@@ -1,0 +1,15 @@
+{
+    "name": "Synth CDKTF Python Project",
+    "description": "A workflow that installs needed dependencies of python project (cdktf cli as well, its version coming from the cdktf version present in the Pipfile) and runs synth on it",
+    "creator": "HashiCorp",
+    "iconName": "octicon package",
+    "categories": [
+        "‎Python",
+        "Pip",
+        "Automation",
+        "Testing"
+    ],
+    "filePatterns": [
+        "^Pipfile.lock$"
+    ]
+}

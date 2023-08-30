@@ -1,0 +1,38 @@
+name: Python Project Synth
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - labeled
+      - unlabeled
+      - reopened
+  workflow_dispatch: {}
+
+jobs:
+  synth:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.mirror.hashicorp.services/hashicorp/jsii-terraform
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+      - name: ensure correct user
+        run: chown -R root /__w/cdktf-integration-serverless-python-gcp-example/
+      - name: Create Yarn Project
+        run: yarn init --yes
+      - name: Read CDKTF CLI Version
+        id: cdktf-version
+        run: echo "cdktf_version=$(cat Pipfile | grep 'cdktf =' | awk -F'"' '{gsub("~=","",$2); print $2}')" >> "$GITHUB_OUTPUT"
+      - name: Add CDKTF CLI
+        run: yarn global add cdktf-cli@${{ steps.cdktf-version.outputs.cdktf_version}}
+      - name: Generate Pipfile.lock
+        run: pipenv lock
+      - name: Install Python Dependencies
+        run: pipenv requirements | sed -nE 's/^([[:alnum:]-]+==[0-9]+\.[0-9]+\.[0-9]+).*$/\1/p' | PIPENV_VENV_IN_PROJECT=1 bash -c 'dependencies=$(cat); echo "$dependencies" | while read -r requirement; do echo "INSTALLING $requirement"; pipenv run pip install "$requirement"; done'
+      - name: Synth
+        run: cdktf synth
