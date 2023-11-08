@@ -1,5 +1,0 @@
-{
-    "name": "Vault Plugin Backport",
-    "description": "Performs backports, using the backport-assistant cli for Vault plugin repos",
-    "iconName": "vault-logo"
-}
