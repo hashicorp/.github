@@ -9,3 +9,4 @@ In order for us to best respond to your report, please include any of the follow
 * Tool output
 
 For additional information about HashiCorp security, please see [https://hashicorp.com/security](https://hashicorp.com/security).
+https://github.com/hashicorp/policy-library-azure-storage-terraform/blob/main/policies%2Fsecure-transfer-required-is-enabled%2Fsecure-transfer-required-is-enabled.sentinel
